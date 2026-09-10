@@ -24,14 +24,20 @@ export default function Hero() {
 
         <div>
           {/* Role */}
-          <motion.p
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="mb-6 font-mono text-xs uppercase tracking-[0.3em] text-neutral-400"
+            className="mb-7"
           >
-            Multimedia Engineer
-          </motion.p>
+            <p className="font-mono text-xs font-medium uppercase tracking-[0.25em] text-neutral-400">
+              Juan Sebastian Rincón
+            </p>
+
+            <p className="mt-2 font-mono text-xs uppercase tracking-[0.2em] text-neutral-600">
+              Multimedia Engineer / Software Developer
+            </p>
+          </motion.div>
 
           {/* Availability */}
           <motion.div

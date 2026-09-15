@@ -12,11 +12,69 @@ export default function About() {
   return (
     <section
       id="about"
-      className="border-t border-neutral-800 bg-[#090909] py-32"
+      className="relative overflow-hidden border-t border-neutral-800 bg-[#0B0B0B] py-32"
     >
-      <div className="mx-auto max-w-7xl px-6 2xl:max-w-[1500px] lg:px-12">
+      {/* =========================================================
+          BACKGROUND ATMOSPHERE
+      ========================================================= */}
 
-        {/* Section label */}
+      <div className="pointer-events-none absolute inset-0">
+
+        {/* Technical grid */}
+        <div
+          className="absolute inset-0 opacity-[0.045]"
+          style={{
+            backgroundImage:
+              "linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(90deg, #ffffff 1px, transparent 1px)",
+            backgroundSize: "100px 100px",
+            maskImage:
+              "linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%)",
+            WebkitMaskImage:
+              "linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%)",
+          }}
+        />
+
+        {/* Ambient red glow */}
+        <motion.div
+          animate={{
+            opacity: [0.06, 0.11, 0.06],
+            scale: [0.95, 1.05, 0.95],
+          }}
+          transition={{
+            duration: 9,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className="absolute left-[-15%] top-[25%] h-[600px] w-[600px] rounded-full blur-[150px]"
+          style={{
+            background:
+              "radial-gradient(circle, rgba(229,57,53,0.18) 0%, transparent 70%)",
+          }}
+        />
+
+        {/* Structural vertical lines */}
+        <div className="absolute inset-y-0 left-[8%] w-px bg-gradient-to-b from-transparent via-neutral-800/40 to-transparent" />
+
+        <div className="absolute inset-y-0 right-[8%] w-px bg-gradient-to-b from-transparent via-neutral-800/30 to-transparent" />
+
+        {/* Small red marker */}
+        <div className="absolute left-[8%] top-[18%] h-2 w-2 -translate-x-1/2 rounded-full border border-[#E53935]/70 bg-[#0B0B0B]" />
+
+        {/* Horizontal structural line */}
+        <div className="absolute left-0 right-0 top-[12%] h-px bg-gradient-to-r from-transparent via-neutral-800/30 to-transparent" />
+
+      </div>
+
+      {/* =========================================================
+          CONTENT
+      ========================================================= */}
+
+      <div className="relative mx-auto max-w-7xl px-6 lg:px-12 2xl:max-w-[1500px]">
+
+        {/* =======================================================
+            SECTION LABEL
+        ======================================================= */}
+
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -24,7 +82,7 @@ export default function About() {
           transition={{ duration: 0.6 }}
           className="mb-20 flex items-center gap-4"
         >
-          <span className="font-mono text-xs tracking-[0.2em] text-[#7CFF6B]">
+          <span className="font-mono text-xs tracking-[0.2em] text-[#E53935]">
             01
           </span>
 
@@ -35,7 +93,10 @@ export default function About() {
           </span>
         </motion.div>
 
-        {/* Main statement */}
+        {/* =======================================================
+            MAIN STATEMENT
+        ======================================================= */}
+
         <motion.h2
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -48,45 +109,91 @@ export default function About() {
         >
           I'M INTERESTED IN
           <br />
+
           BUILDING THINGS
           <br />
-          <span className="text-neutral-600">
+
+          <span className="text-[#E53935]">
             PEOPLE CAN INTERACT WITH.
           </span>
         </motion.h2>
 
-        {/* Main content */}
-        <div className="mt-24 grid gap-16 lg:grid-cols-[1.05fr_0.95fr] lg:gap-20">
+        {/* =======================================================
+            MAIN CONTENT
+        ======================================================= */}
 
-          {/* Photo + Identity */}
+        <div className="mt-24 grid gap-16 lg:grid-cols-[1fr_1fr] lg:gap-24">
+
+          {/* =====================================================
+              PHOTO + IDENTITY
+          ===================================================== */}
+
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
+
             {/* Identity */}
             <div className="mb-6">
-              <p className="font-mono text-sm font-medium tracking-[0.2em] text-white">
-                SEBASTIAN RINCÓN
-              </p>
+              <div className="flex items-center gap-3">
 
-              <p className="mt-2 text-base text-neutral-400 sm:text-lg">
+                <span className="h-2 w-2 rounded-full bg-[#E53935] shadow-[0_0_10px_#E53935]" />
+
+                <p className="font-mono text-sm font-medium tracking-[0.2em] text-white">
+                  SEBASTIAN RINCÓN
+                </p>
+
+              </div>
+
+              <p className="mt-2 pl-5 text-base text-neutral-400 sm:text-lg">
                 Multimedia Engineer / Software Developer
               </p>
             </div>
 
-            {/* Photo placeholder */}
-            <div className="group relative aspect-[4/5] w-full max-w-md overflow-hidden border border-neutral-800 bg-[#141414]">
+            {/* Photo */}
+            <div className="group relative aspect-[4/5] w-full max-w-md overflow-hidden border border-neutral-800 bg-[#101010]">
 
-              {/* Center placeholder */}
+              {/* =================================================
+                  PLACEHOLDER
+              ================================================= */}
+
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
 
-                  <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full border border-neutral-700 transition-colors duration-500 group-hover:border-neutral-500">
-                    <span className="font-mono text-xl text-neutral-600">
+                {/* Local grid */}
+                <div
+                  className="absolute inset-0 opacity-[0.06]"
+                  style={{
+                    backgroundImage:
+                      "linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(90deg, #ffffff 1px, transparent 1px)",
+                    backgroundSize: "50px 50px",
+                  }}
+                />
+
+                {/* Radial red glow */}
+                <motion.div
+                  animate={{
+                    opacity: [0.08, 0.16, 0.08],
+                    scale: [0.9, 1.05, 0.9],
+                  }}
+                  transition={{
+                    duration: 6,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
+                  className="absolute h-56 w-56 rounded-full bg-[#E53935]/10 blur-[90px]"
+                />
+
+                {/* Center */}
+                <div className="relative text-center">
+
+                  <div className="mx-auto mb-5 flex h-24 w-24 items-center justify-center rounded-full border border-neutral-700 transition-all duration-500 group-hover:border-[#E53935] group-hover:shadow-[0_0_40px_rgba(229,57,53,0.15)]">
+
+                    <span className="font-mono text-3xl text-neutral-500 transition-colors duration-500 group-hover:text-[#E53935]">
                       SR
                     </span>
+
                   </div>
 
                   <p className="font-mono text-xs tracking-[0.2em] text-neutral-600">
@@ -94,143 +201,269 @@ export default function About() {
                   </p>
 
                 </div>
+
               </div>
 
-              {/* Decorative dot */}
-              <div className="absolute left-5 top-5 h-2 w-2 rounded-full bg-[#7CFF6B] opacity-60 shadow-[0_0_10px_#7CFF6B]" />
+              {/* =================================================
+                  TOP LEFT INDICATOR
+              ================================================= */}
 
-              {/* Bottom metadata */}
+              <div className="absolute left-5 top-5 flex items-center gap-2">
+
+                <span className="h-1.5 w-1.5 rounded-full bg-[#E53935] shadow-[0_0_10px_#E53935]" />
+
+                <span className="font-mono text-[10px] tracking-[0.15em] text-neutral-600">
+                  PROFILE
+                </span>
+
+              </div>
+
+              {/* =================================================
+                  TOP RIGHT CORNER
+              ================================================= */}
+
+              <div className="absolute right-5 top-5 h-8 w-8 border-r border-t border-neutral-700 transition-all duration-500 group-hover:h-12 group-hover:w-12 group-hover:border-[#E53935]" />
+
+              {/* =================================================
+                  LEFT SIDE MARKER
+              ================================================= */}
+
+              <div className="absolute bottom-1/2 left-0 h-16 w-px bg-gradient-to-b from-transparent via-[#E53935]/60 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+
+              {/* =================================================
+                  BOTTOM METADATA
+              ================================================= */}
+
               <div className="absolute bottom-5 left-5 right-5 flex justify-between font-mono text-[10px] tracking-[0.15em] text-neutral-600">
-                <span>SEBASTIAN_R</span>
-                <span>001</span>
+
+                <span>
+                  SEBASTIAN_R
+                </span>
+
+                <span>
+                  001
+                </span>
+
               </div>
 
-              {/* Hover border */}
-              <div className="absolute inset-0 border border-transparent transition-colors duration-500 group-hover:border-neutral-600" />
+              {/* =================================================
+                  BOTTOM RED LINE
+              ================================================= */}
+
+              <motion.div
+                initial={{ width: "0%" }}
+                whileInView={{ width: "35%" }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 1,
+                  delay: 0.4,
+                }}
+                className="absolute bottom-0 left-0 h-px bg-[#E53935]"
+              />
+
+              {/* =================================================
+                  HOVER BORDER
+              ================================================= */}
+
+              <div className="pointer-events-none absolute inset-0 border border-transparent transition-colors duration-500 group-hover:border-neutral-600" />
+
             </div>
           </motion.div>
 
-          {/* Description */}
+          {/* =====================================================
+              DESCRIPTION
+          ===================================================== */}
+
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.1 }}
+            transition={{
+              duration: 0.8,
+              delay: 0.1,
+            }}
             className="flex flex-col justify-center"
           >
-            <p className="max-w-2xl text-base leading-relaxed text-neutral-300 sm:text-lg">
+
+            {/* Main paragraph */}
+            <p className="max-w-2xl text-base leading-relaxed text-neutral-200 sm:text-lg">
               I'm a Multimedia Engineer and Software Developer focused on
               creating digital products that combine technology, creativity
               and interaction.
             </p>
 
-            <p className="mt-6 max-w-2xl text-base leading-relaxed text-neutral-500">
+            {/* Secondary paragraph */}
+            <p className="mt-6 max-w-2xl text-base leading-relaxed text-neutral-500 sm:text-lg">
               My experience spans web development, software, game development
               and interactive experiences. I enjoy turning ideas into
               functional products while paying attention to both the technical
               implementation and the experience of the people using them.
             </p>
 
+            {/* CTA */}
             <a
               href="#contact"
-              className="group mt-10 inline-flex w-fit items-center gap-3 border-b border-neutral-700 pb-2 font-mono text-xs tracking-[0.18em] text-neutral-400 transition-colors hover:border-[#7CFF6B] hover:text-white"
+              className="group mt-10 inline-flex w-fit items-center gap-3 border-b border-neutral-700 pb-2 font-mono text-xs tracking-[0.18em] text-neutral-400 transition-colors duration-300 hover:border-[#E53935] hover:text-white"
             >
               LET'S WORK TOGETHER
 
               <ArrowDownRight
                 size={15}
-                className="transition-transform duration-300 group-hover:translate-x-1 group-hover:translate-y-1"
+                className="transition-all duration-300 group-hover:translate-x-1 group-hover:translate-y-1 group-hover:text-[#E53935]"
               />
             </a>
+
+            {/* Approach */}
+            <div className="mt-16 border-l border-[#E53935] pl-5">
+
+              <p className="font-mono text-xs uppercase tracking-[0.15em] text-neutral-500">
+                APPROACH
+              </p>
+
+              <p className="mt-3 max-w-md text-sm leading-relaxed text-neutral-400">
+                Technology should not only work — it should create an
+                experience worth remembering.
+              </p>
+
+            </div>
+
           </motion.div>
         </div>
 
-        {/* Profile information */}
+        {/* =======================================================
+            PROFILE INFORMATION
+        ======================================================= */}
+
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.7, delay: 0.2 }}
+          transition={{
+            duration: 0.7,
+            delay: 0.2,
+          }}
           className="mt-24 border-t border-neutral-800"
         >
+
           {/* Profile details */}
           <div className="grid lg:grid-cols-3">
 
-            {/* Role */}
+            {/* ROLE */}
             <div className="flex items-center justify-between border-b border-neutral-800 py-6 lg:border-r lg:px-8 lg:first:pl-0">
+
               <span className="font-mono text-xs tracking-[0.18em] text-neutral-500">
                 ROLE
               </span>
 
-              <span className="text-sm text-neutral-300 sm:text-base">
-                Multimedia Engineer
-              </span>
+              <div className="flex items-center gap-3">
+
+                <span className="h-1.5 w-1.5 rounded-full bg-[#E53935]" />
+
+                <span className="text-sm text-neutral-300 sm:text-base">
+                  Multimedia Engineer
+                </span>
+
+              </div>
             </div>
 
-            {/* Focus */}
-            <div className="flex items-center justify-between border-b border-neutral-800 py-6 lg:px-8 lg:border-r">
+            {/* FOCUS */}
+            <div className="flex items-center justify-between border-b border-neutral-800 py-6 lg:border-r lg:px-8">
+
               <span className="font-mono text-xs tracking-[0.18em] text-neutral-500">
                 FOCUS
               </span>
 
-              <span className="text-right text-sm text-neutral-300 sm:text-base">
-                Software & Interactive Media
-              </span>
+              <div className="flex items-center gap-3">
+
+                <span className="h-1.5 w-1.5 rounded-full bg-[#E53935]" />
+
+                <span className="text-right text-sm text-neutral-300 sm:text-base">
+                  Software & Interactive Media
+                </span>
+
+              </div>
             </div>
 
-            {/* Location */}
+            {/* BASE */}
             <div className="flex items-center justify-between border-b border-neutral-800 py-6 lg:pl-8">
+
               <span className="font-mono text-xs tracking-[0.18em] text-neutral-500">
                 BASE
               </span>
 
-              <span className="text-sm text-neutral-300 sm:text-base">
-                Colombia
-              </span>
+              <div className="flex items-center gap-3">
+
+                <span className="h-1.5 w-1.5 rounded-full bg-[#E53935]" />
+
+                <span className="text-sm text-neutral-300 sm:text-base">
+                  Colombia
+                </span>
+
+              </div>
             </div>
 
           </div>
 
-          {/* Areas */}
+          {/* =====================================================
+              AREAS
+          ===================================================== */}
+
           <div className="py-8">
+
             <span className="font-mono text-xs tracking-[0.18em] text-neutral-500">
               AREAS
             </span>
 
             <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+
               {skills.map((skill, index) => (
                 <div
                   key={skill}
                   className="group flex items-center gap-3 text-sm text-neutral-400 transition-colors hover:text-white sm:text-base"
                 >
-                  <span className="font-mono text-[10px] text-neutral-600 transition-colors group-hover:text-[#7CFF6B]">
+
+                  <span className="font-mono text-[10px] text-neutral-600 transition-colors group-hover:text-[#E53935]">
                     0{index + 1}
                   </span>
 
-                  {skill}
+                  <span>
+                    {skill}
+                  </span>
+
                 </div>
               ))}
+
             </div>
           </div>
         </motion.div>
 
-        {/* Bottom statement */}
+        {/* =======================================================
+            BOTTOM STATEMENT
+        ======================================================= */}
+
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 1, delay: 0.3 }}
+          transition={{
+            duration: 1,
+            delay: 0.3,
+          }}
           className="mt-24 border-t border-neutral-800 pt-6"
         >
+
           <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
+
             <span className="font-mono text-xs tracking-[0.22em] text-neutral-500">
               TECHNOLOGY × CREATIVITY × INTERACTION
             </span>
 
-            <span className="font-mono text-xs tracking-[0.22em] text-neutral-500">
+            <span className="font-mono text-xs tracking-[0.22em] text-[#E53935]">
               01
             </span>
+
           </div>
+
         </motion.div>
 
       </div>

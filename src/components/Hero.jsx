@@ -116,7 +116,7 @@ export default function Hero() {
               <span className="h-px w-8 bg-[#E53935]" />
 
               <p className="font-mono text-xs font-medium uppercase tracking-[0.25em] text-white">
-                Sebastián Rincón
+                Sebastian Rincón
               </p>
             </div>
 

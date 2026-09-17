@@ -3,9 +3,6 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  plugins: [
-    react(),
-    tailwindcss(),
-  ],
-  base:'https://CharlesRincon.github.io/Sebastian-Portfolio'
+  plugins: [react(), tailwindcss()],
+  base: process.env.NODE_ENV === 'production' ? '/Sebastian-Portfolio/' : '/',
 })

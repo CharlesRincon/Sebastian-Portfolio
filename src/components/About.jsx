@@ -155,54 +155,13 @@ export default function About() {
             {/* Photo */}
             <div className="group relative aspect-[4/5] w-full max-w-md overflow-hidden border border-neutral-800 bg-[#101010]">
 
-              {/* =================================================
-                  PLACEHOLDER
-              ================================================= */}
+              <img
+                src="/images/CV%20-%20Juan%20Sebastian%20Rinc%C3%B3n.png"
+                alt="Sebastian Rincón portrait"
+                className="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]"
+              />
 
-              <div className="absolute inset-0 flex items-center justify-center">
-
-                {/* Local grid */}
-                <div
-                  className="absolute inset-0 opacity-[0.06]"
-                  style={{
-                    backgroundImage:
-                      "linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(90deg, #ffffff 1px, transparent 1px)",
-                    backgroundSize: "50px 50px",
-                  }}
-                />
-
-                {/* Radial red glow */}
-                <motion.div
-                  animate={{
-                    opacity: [0.08, 0.16, 0.08],
-                    scale: [0.9, 1.05, 0.9],
-                  }}
-                  transition={{
-                    duration: 6,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
-                  className="absolute h-56 w-56 rounded-full bg-[#E53935]/10 blur-[90px]"
-                />
-
-                {/* Center */}
-                <div className="relative text-center">
-
-                  <div className="mx-auto mb-5 flex h-24 w-24 items-center justify-center rounded-full border border-neutral-700 transition-all duration-500 group-hover:border-[#E53935] group-hover:shadow-[0_0_40px_rgba(229,57,53,0.15)]">
-
-                    <span className="font-mono text-3xl text-neutral-500 transition-colors duration-500 group-hover:text-[#E53935]">
-                      SR
-                    </span>
-
-                  </div>
-
-                  <p className="font-mono text-xs tracking-[0.2em] text-neutral-600">
-                    PORTRAIT_PLACEHOLDER
-                  </p>
-
-                </div>
-
-              </div>
+              <div className="absolute inset-0 bg-black/10" />
 
               {/* =================================================
                   TOP LEFT INDICATOR

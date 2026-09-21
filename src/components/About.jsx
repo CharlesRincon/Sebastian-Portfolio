@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowDownRight } from "lucide-react";
+import portraitPhoto from "../assets/images/PortraitPhoto.png";
 
 const skills = [
   "Web Development",
@@ -156,7 +157,7 @@ export default function About() {
             <div className="group relative aspect-[4/5] w-full max-w-md overflow-hidden border border-neutral-800 bg-[#101010]">
 
               <img
-                src="/images/CV%20-%20Juan%20Sebastian%20Rinc%C3%B3n.png"
+                src={portraitPhoto}
                 alt="Sebastian Rincón portrait"
                 className="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]"
               />

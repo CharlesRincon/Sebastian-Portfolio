@@ -1,3 +1,7 @@
+import mushroomMania from "../assets/images/MushroomMania.png";
+import crowdFighter from "../assets/images/CrowdFighter.png";
+import zombieHospital from "../assets/images/ZombieHospital.png";
+
 const projects = [
     {
         id: 1,
@@ -7,7 +11,7 @@ const projects = [
         year: "2026",
         description: "An interactive web experience focused on water conservation, combining modern UI design with motion and responsive interactions.",
         technologies: ["React", "Tailwind CSS", "Framer Motion"],
-        image: `${import.meta.env.BASE_URL}images/MushroomMania.png`,
+        image: mushroomMania,
         link: "https://charlesrincon.itch.io/mushroommania",
     },
     {
@@ -18,7 +22,7 @@ const projects = [
         year: "2026",
         description: "A multiplayer game developed in Unity, featuring real-time player synchronization and networked gameplay.",
         technologies: ["Unity", "C#", "Photon Fusion"],
-        image: `${import.meta.env.BASE_URL}images/CrowdFighter.png`,
+        image: crowdFighter,
         link: "https://charlesrincon.itch.io/crowdfighter",
     },
     {
@@ -29,7 +33,7 @@ const projects = [
         year: "2026",
         description: "A physical board game enhanced with augmented reality and multiplayer features through a mobile application.",
         technologies: ["Unity", "Vuforia", "Photon Fusion"],
-        image: `${import.meta.env.BASE_URL}images/ZombieHospital.png`,
+        image: zombieHospital,
         link: "https://charlesrincon.itch.io/zombie-hospital",
     },
 ];

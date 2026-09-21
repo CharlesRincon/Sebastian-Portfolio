@@ -148,7 +148,7 @@ export default function Projects() {
 
                 {/* PROJECTS */}
 
-                <div className="space-y-32">
+                <div className="grid grid-cols-1 gap-x-8 gap-y-24 md:grid-cols-2">
 
                     {projects.map((project, index) => (
                         <motion.article
@@ -167,13 +167,13 @@ export default function Projects() {
                             }}
                             transition={{
                                 duration: 0.8,
-                                delay: index * 0.05,
+                                delay: (index % 2) * 0.08,
                                 ease: [0.22, 1, 0.36, 1],
                             }}
                             className="group"
                         >
 
-                            {/* PROJECT VISUAL*/}
+                            {/* PROJECT VISUAL */}
 
                             <a
                                 href={project.link}
@@ -181,9 +181,9 @@ export default function Projects() {
                                 rel="noopener noreferrer"
                                 className="relative block overflow-hidden border border-neutral-800 bg-[#101010]"
                             >
-                                <div className="relative aspect-[16/9] overflow-hidden">
+                                <div className="relative aspect-[16/10] overflow-hidden">
 
-                                    {/* PROJECT IMAGE*/}
+                                    {/* PROJECT IMAGE */}
 
                                     {project.image ? (
                                         <img
@@ -228,34 +228,32 @@ export default function Projects() {
                                                     repeat: Infinity,
                                                     ease: "easeInOut",
                                                 }}
-                                                className="relative font-mono text-[100px] font-bold tracking-[-0.08em] text-neutral-800 transition-colors duration-500 group-hover:text-neutral-700 sm:text-[160px] lg:text-[200px] 2xl:text-[240px]"
+                                                className="relative font-mono text-[90px] font-bold tracking-[-0.08em] text-neutral-800 transition-colors duration-500 group-hover:text-neutral-700 sm:text-[130px] lg:text-[150px] 2xl:text-[180px]"
                                             >
                                                 {project.number}
                                             </motion.span>
 
                                             {/* Top left identifier */}
-                                            <div className="absolute left-6 top-6 flex items-center gap-3">
-
+                                            <div className="absolute left-5 top-5 flex items-center gap-3">
                                                 <span className="h-1.5 w-1.5 rounded-full bg-[#E53935] shadow-[0_0_10px_#E53935]" />
 
-                                                <span className="font-mono text-[10px] tracking-[0.2em] text-neutral-600">
+                                                <span className="font-mono text-[9px] tracking-[0.2em] text-neutral-600">
                                                     PROJECT_{project.number}
                                                 </span>
-
                                             </div>
 
                                             {/* Top right status */}
-                                            <div className="absolute right-6 top-6 font-mono text-[10px] tracking-[0.18em] text-neutral-600">
+                                            <div className="absolute right-5 top-5 font-mono text-[9px] tracking-[0.18em] text-neutral-600">
                                                 00{index + 1} / SYSTEM
                                             </div>
 
                                             {/* Bottom left */}
-                                            <div className="absolute bottom-6 left-6 font-mono text-[10px] tracking-[0.2em] text-neutral-600">
+                                            <div className="absolute bottom-5 left-5 font-mono text-[9px] tracking-[0.2em] text-neutral-600">
                                                 DIGITAL_EXPERIENCE
                                             </div>
 
                                             {/* Bottom right */}
-                                            <div className="absolute bottom-6 right-6 font-mono text-[10px] tracking-[0.18em] text-neutral-700">
+                                            <div className="absolute bottom-5 right-5 font-mono text-[9px] tracking-[0.18em] text-neutral-700">
                                                 2026
                                             </div>
 
@@ -267,22 +265,25 @@ export default function Projects() {
                                     <div className="pointer-events-none absolute inset-0 bg-black/0 transition-colors duration-500 group-hover:bg-black/25" />
 
                                     {/* Red frame */}
+
                                     <div className="pointer-events-none absolute inset-0 border border-transparent transition-colors duration-500 group-hover:border-[#E53935]/60" />
 
                                     {/* Top-left corner */}
-                                    <div className="pointer-events-none absolute left-0 top-0 h-10 w-10 border-l border-t border-transparent transition-all duration-500 group-hover:h-20 group-hover:w-20 group-hover:border-[#E53935]" />
+
+                                    <div className="pointer-events-none absolute left-0 top-0 h-8 w-8 border-l border-t border-transparent transition-all duration-500 group-hover:h-16 group-hover:w-16 group-hover:border-[#E53935]" />
 
                                     {/* Bottom-right corner */}
-                                    <div className="pointer-events-none absolute bottom-0 right-0 h-10 w-10 border-b border-r border-transparent transition-all duration-500 group-hover:h-20 group-hover:w-20 group-hover:border-[#E53935]" />
+
+                                    <div className="pointer-events-none absolute bottom-0 right-0 h-8 w-8 border-b border-r border-transparent transition-all duration-500 group-hover:h-16 group-hover:w-16 group-hover:border-[#E53935]" />
 
                                     {/* VIEW PROJECT */}
 
-                                    <div className="absolute bottom-6 right-6 flex translate-y-5 items-center gap-3 bg-white px-5 py-3.5 text-sm font-medium !text-black opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                                    <div className="absolute bottom-5 right-5 flex translate-y-5 items-center gap-3 bg-white px-4 py-3 text-xs font-medium !text-black opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
 
                                         VIEW PROJECT
 
                                         <ArrowUpRight
-                                            size={16}
+                                            size={15}
                                             className="text-black transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                                         />
 
@@ -291,53 +292,52 @@ export default function Projects() {
                                 </div>
                             </a>
 
-                            {/* PROJECT INFORMATION*/}
+                            {/* PROJECT INFORMATION */}
 
-                            <div className="mt-8 grid gap-10 border-t border-neutral-800 pt-7 md:grid-cols-[1fr_auto] md:items-start">
+                            <div className="mt-6 border-t border-neutral-800 pt-6">
 
-                                <div>
+                                {/* Metadata */}
 
-                                    {/* Metadata */}
-                                    <div className="mb-5 flex flex-wrap items-center gap-3 font-mono text-[10px] tracking-[0.2em] text-neutral-600 sm:text-xs">
+                                <div className="mb-4 flex flex-wrap items-center gap-3 font-mono text-[10px] tracking-[0.2em] text-neutral-600">
 
-                                        <span className="text-[#E53935]">
-                                            {project.number}
-                                        </span>
+                                    <span className="text-[#E53935]">
+                                        {project.number}
+                                    </span>
 
-                                        <span>/</span>
+                                    <span>/</span>
 
-                                        <span>
-                                            {project.category}
-                                        </span>
+                                    <span>
+                                        {project.category}
+                                    </span>
 
-                                        <span>/</span>
+                                    <span>/</span>
 
-                                        <span>
-                                            {project.year}
-                                        </span>
-
-                                    </div>
-
-                                    {/* Title */}
-                                    <h3 className="text-3xl font-semibold tracking-[-0.035em] text-white transition-colors duration-300 group-hover:text-[#E53935] sm:text-4xl lg:text-5xl">
-                                        {project.title}
-                                    </h3>
-
-                                    {/* Description */}
-                                    <p className="mt-5 max-w-2xl text-base leading-relaxed text-neutral-400 sm:text-lg">
-                                        {project.description}
-                                    </p>
+                                    <span>
+                                        {project.year}
+                                    </span>
 
                                 </div>
 
-                                {/* TECHNOLOGIES*/}
+                                {/* Title */}
 
-                                <div className="flex flex-wrap gap-2 md:max-w-sm md:justify-end">
+                                <h3 className="text-2xl font-semibold tracking-[-0.035em] text-white transition-colors duration-300 group-hover:text-[#E53935] sm:text-3xl">
+                                    {project.title}
+                                </h3>
+
+                                {/* Description */}
+
+                                <p className="mt-4 text-sm leading-relaxed text-neutral-400 sm:text-base">
+                                    {project.description}
+                                </p>
+
+                                {/* Technologies */}
+
+                                <div className="mt-5 flex flex-wrap gap-2">
 
                                     {project.technologies.map((technology) => (
                                         <span
                                             key={technology}
-                                            className="border border-neutral-800 px-3.5 py-2 font-mono text-[10px] tracking-[0.08em] text-neutral-500 transition-all duration-300 group-hover:border-neutral-700 group-hover:text-neutral-300"
+                                            className="border border-neutral-800 px-3 py-1.5 font-mono text-[9px] tracking-[0.08em] text-neutral-500 transition-all duration-300 group-hover:border-neutral-700 group-hover:text-neutral-300"
                                         >
                                             {technology}
                                         </span>
@@ -347,21 +347,21 @@ export default function Projects() {
 
                             </div>
 
-                            {/* PROJECT FOOTER*/}
+                            {/* PROJECT FOOTER */}
 
-                            <div className="mt-7 flex items-center justify-between">
+                            <div className="mt-6 flex items-center justify-between">
 
                                 <div className="flex items-center gap-3">
 
-                                    <span className="h-px w-8 bg-neutral-800 transition-all duration-300 group-hover:w-14 group-hover:bg-[#E53935]" />
+                                    <span className="h-px w-8 bg-neutral-800 transition-all duration-300 group-hover:w-12 group-hover:bg-[#E53935]" />
 
-                                    <span className="font-mono text-[10px] tracking-[0.2em] text-neutral-600 transition-colors duration-300 group-hover:text-neutral-400">
+                                    <span className="font-mono text-[9px] tracking-[0.2em] text-neutral-600 transition-colors duration-300 group-hover:text-neutral-400">
                                         VIEW CASE
                                     </span>
 
                                 </div>
 
-                                <span className="font-mono text-[10px] tracking-[0.2em] text-neutral-700">
+                                <span className="font-mono text-[9px] tracking-[0.2em] text-neutral-700">
                                     0{index + 1}
                                 </span>
 

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowDownRight } from "lucide-react";
-import portraitPhoto from "../assets/images/PortraitPhoto.png";
+import portraitPhoto from "../assets/images/PortraitPhoto.jpg";
 
 const skills = [
   "Web Development",
@@ -172,7 +172,7 @@ export default function About() {
 
                 <span className="h-1.5 w-1.5 rounded-full bg-[#E53935] shadow-[0_0_10px_#E53935]" />
 
-                <span className="font-mono text-[10px] tracking-[0.15em] text-neutral-600">
+                <span className="font-mono text-[11px] tracking-[0.15em] text-neutral-500">
                   PROFILE
                 </span>
 
@@ -194,7 +194,7 @@ export default function About() {
                   BOTTOM METADATA
               ================================================= */}
 
-              <div className="absolute bottom-5 left-5 right-5 flex justify-between font-mono text-[10px] tracking-[0.15em] text-neutral-600">
+              <div className="absolute bottom-5 left-5 right-5 flex justify-between font-mono text-[11px] tracking-[0.15em] text-neutral-500">
 
                 <span>
                   SEBASTIAN_R
@@ -382,7 +382,7 @@ export default function About() {
                   className="group flex items-center gap-3 text-sm text-neutral-400 transition-colors hover:text-white sm:text-base"
                 >
 
-                  <span className="font-mono text-[10px] text-neutral-600 transition-colors group-hover:text-[#E53935]">
+                  <span className="font-mono text-[11px] text-neutral-500 transition-colors group-hover:text-[#E53935]">
                     0{index + 1}
                   </span>
 

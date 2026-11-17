@@ -1,6 +1,6 @@
-import mushroomMania from "../assets/images/MushroomMania.png";
-import crowdFighter from "../assets/images/CrowdFighter.png";
-import zombieHospital from "../assets/images/ZombieHospital.png";
+import mushroomMania from "../assets/images/MushroomMania.jpg";
+import crowdFighter from "../assets/images/CrowdFighter.jpg";
+import zombieHospital from "../assets/images/ZombieHospital.jpg";
 
 const projects = [
     {

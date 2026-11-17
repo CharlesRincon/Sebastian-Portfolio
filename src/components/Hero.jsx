@@ -43,68 +43,10 @@ export default function Hero() {
           }}
         />
 
-        {/* Secondary dark red field */}
-        <motion.div
-          animate={{
-            opacity: [0.05, 0.1, 0.05],
-            x: [-20, 20, -20],
-            y: [10, -10, 10],
-          }}
-          transition={{
-            duration: 12,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className="absolute left-[-15%] top-[45%] h-[500px] w-[500px] rounded-full blur-[140px]"
-          style={{
-            background:
-              "radial-gradient(circle, rgba(229,57,53,0.18) 0%, transparent 70%)",
-          }}
-        />
-
-        {/* Vertical technical lines */}
-        <div className="absolute inset-y-0 left-[8%] w-px bg-gradient-to-b from-transparent via-neutral-800/40 to-transparent" />
-
-        <div className="absolute inset-y-0 right-[8%] w-px bg-gradient-to-b from-transparent via-neutral-800/30 to-transparent" />
-
-        {/* Red signal line */}
-        <motion.div
-          animate={{
-            opacity: [0, 0.35, 0],
-            scaleY: [0.7, 1, 0.7],
-          }}
-          transition={{
-            duration: 5,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className="absolute right-[8%] top-[20%] h-[180px] w-px origin-center bg-[#E53935] shadow-[0_0_12px_rgba(229,57,53,0.5)]"
-        />
-
-        {/* Horizontal structural line */}
-        <div className="absolute left-0 right-0 top-[18%] h-px bg-gradient-to-r from-transparent via-neutral-800/30 to-transparent" />
-
-        {/* Small red coordinate marker */}
-        <div className="absolute right-[7.7%] top-[18%] h-2 w-2 rounded-full border border-[#E53935]/60 bg-[#090909]" />
-
       </div>
 
-      {/* Ambient red glow */}
-      <motion.div
-        animate={{
-          opacity: [0.18, 0.3, 0.18],
-          scale: [0.95, 1.05, 0.95],
-        }}
-        transition={{
-          duration: 7,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-        className="pointer-events-none absolute right-[-10%] top-[10%] h-[550px] w-[550px] rounded-full bg-[#E53935]/10 blur-[130px]"
-      />
-
       <div className="relative mx-auto grid min-h-screen max-w-7xl items-center gap-12 px-6 py-32 lg:grid-cols-[1.05fr_0.95fr] lg:px-12 2xl:max-w-[1500px] 2xl:grid-cols-[1fr_0.95fr] 2xl:gap-16">
-        <div>
+        <div className="min-w-0">
           {/* Identity */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -155,25 +97,17 @@ export default function Hero() {
             }}
             className="relative"
           >
-            {/* Red glow behind heading */}
-            <motion.div
-              animate={{
-                opacity: [0.35, 0.90, 0.35],
-                scale: [0.95, 1.05, 0.95],
-              }}
-              transition={{
-                duration: 2,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-              className="pointer-events-none absolute -left-32 top-1/2 h-[320px] w-[750px] -translate-y-1/2 blur-[80px]"
+            {/* Static red glow behind heading */}
+            <div
+              className="pointer-events-none absolute -left-32 top-1/2 h-[320px] w-[750px] max-w-[100vw] -translate-y-1/2 opacity-50 blur-[80px]"
               style={{
                 background:
-                  "radial-gradient(ellipse at center, rgba(229,57,53,0.65) 0%, rgba(229,57,53,0.35) 35%, rgba(229,57,53,0.12) 60%, transparent 78%)",
+                  "radial-gradient(ellipse at center, rgba(229,57,53,0.55) 0%, rgba(229,57,53,0.25) 40%, transparent 75%)",
               }}
             />
 
-            <h1 className="relative text-6xl font-bold leading-[0.88] tracking-[-0.055em] sm:text-7xl lg:text-[5.5rem] 2xl:text-[7.5rem]">
+            {/* clamp keeps "EXPERIENCES" inside 320px screens */}
+            <h1 className="relative text-[clamp(2.5rem,12.5vw,4.5rem)] font-bold leading-[0.9] tracking-[-0.04em] sm:text-7xl lg:text-[5.5rem] 2xl:text-[7.5rem]">
               I BUILD
               <br />
 

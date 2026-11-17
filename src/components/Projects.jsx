@@ -188,7 +188,9 @@ export default function Projects() {
                                     {project.image ? (
                                         <img
                                             src={project.image}
-                                            alt={project.title}
+                                            alt={`${project.title} gameplay screenshot`}
+                                            loading="lazy"
+                                            decoding="async"
                                             className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.035]"
                                         />
                                     ) : (
@@ -298,7 +300,7 @@ export default function Projects() {
 
                                 {/* Metadata */}
 
-                                <div className="mb-4 flex flex-wrap items-center gap-3 font-mono text-[10px] tracking-[0.2em] text-neutral-600">
+                                <div className="mb-4 flex flex-wrap items-center gap-3 font-mono text-xs tracking-[0.16em] text-neutral-400">
 
                                     <span className="text-[#E53935]">
                                         {project.number}
@@ -337,7 +339,7 @@ export default function Projects() {
                                     {project.technologies.map((technology) => (
                                         <span
                                             key={technology}
-                                            className="border border-neutral-800 px-3 py-1.5 font-mono text-[9px] tracking-[0.08em] text-neutral-500 transition-all duration-300 group-hover:border-neutral-700 group-hover:text-neutral-300"
+                                            className="border border-neutral-800 px-3 py-1.5 font-mono text-[11px] tracking-[0.08em] text-neutral-400 transition-all duration-300 group-hover:border-neutral-700 group-hover:text-neutral-300"
                                         >
                                             {technology}
                                         </span>
@@ -349,23 +351,20 @@ export default function Projects() {
 
                             {/* PROJECT FOOTER */}
 
-                            <div className="mt-6 flex items-center justify-between">
+                            <a
+                                href={project.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="mt-6 inline-flex min-h-11 items-center gap-3 font-mono text-xs tracking-[0.16em] text-neutral-300 transition-colors duration-300 hover:text-[#E53935]"
+                            >
+                                <span className="h-px w-8 bg-[#E53935] transition-all duration-300 group-hover:w-12" />
 
-                                <div className="flex items-center gap-3">
+                                PLAY ON ITCH.IO
 
-                                    <span className="h-px w-8 bg-neutral-800 transition-all duration-300 group-hover:w-12 group-hover:bg-[#E53935]" />
+                                <ArrowUpRight size={14} aria-hidden="true" />
 
-                                    <span className="font-mono text-[9px] tracking-[0.2em] text-neutral-600 transition-colors duration-300 group-hover:text-neutral-400">
-                                        VIEW CASE
-                                    </span>
-
-                                </div>
-
-                                <span className="font-mono text-[9px] tracking-[0.2em] text-neutral-700">
-                                    0{index + 1}
-                                </span>
-
-                            </div>
+                                <span className="sr-only">(opens in a new tab)</span>
+                            </a>
 
                         </motion.article>
                     ))}
@@ -385,7 +384,7 @@ export default function Projects() {
                     className="mt-24 flex flex-col justify-between gap-4 border-t border-neutral-800 pt-6 sm:flex-row sm:items-center"
                 >
 
-                    <span className="font-mono text-xs tracking-[0.2em] text-neutral-600">
+                    <span className="font-mono text-xs tracking-[0.2em] text-neutral-500">
                         SELECTED PROJECTS / 2026
                     </span>
 

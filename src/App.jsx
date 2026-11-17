@@ -1,3 +1,4 @@
+import { MotionConfig } from "framer-motion";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -9,6 +10,8 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
+    // Honor the OS "reduce motion" setting for every Framer animation.
+    <MotionConfig reducedMotion="user">
     <div className="bg-[#080808]">
 
       <Navbar />
@@ -25,6 +28,7 @@ function App() {
       <Footer />
 
     </div>
+    </MotionConfig>
   );
 }
 

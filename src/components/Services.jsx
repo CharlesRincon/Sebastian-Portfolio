@@ -254,14 +254,14 @@ export default function Services() {
 
                                             </span>
 
-                                            <span className="font-mono text-[10px] tracking-[0.2em] text-neutral-600 transition-colors duration-300 group-hover:text-neutral-400">
+                                            <span className="font-mono text-[11px] tracking-[0.2em] text-neutral-500 transition-colors duration-300 group-hover:text-neutral-400">
                                                 AVAILABLE
                                             </span>
 
                                         </div>
 
                                         {/* Service tag */}
-                                        <span className="font-mono text-[10px] tracking-[0.18em] text-neutral-700 transition-colors duration-300 group-hover:text-[#E53935]">
+                                        <span className="font-mono text-[11px] tracking-[0.18em] text-neutral-500 transition-colors duration-300 group-hover:text-[#E53935]">
                                             {service.tag}
                                         </span>
 

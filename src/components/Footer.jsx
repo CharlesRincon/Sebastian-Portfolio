@@ -8,7 +8,7 @@ export default function Footer() {
                     {/* Identity */}
                     <div>
                         <div className="flex items-center gap-3">
-                            <span className="flex h-8 w-8 items-center justify-center border border-neutral-800 font-mono text-[10px] tracking-[0.1em] text-neutral-300 transition-colors duration-300 hover:border-[#E53935] hover:text-[#E53935]">
+                            <span className="flex h-8 w-8 items-center justify-center border border-neutral-800 font-mono text-[11px] tracking-[0.1em] text-neutral-300 transition-colors duration-300 hover:border-[#E53935] hover:text-[#E53935]">
                                 SR
                             </span>
 
@@ -17,18 +17,18 @@ export default function Footer() {
                             </span>
                         </div>
 
-                        <p className="mt-3 font-mono text-[10px] tracking-[0.15em] text-neutral-600">
+                        <p className="mt-3 font-mono text-[11px] tracking-[0.15em] text-neutral-500">
                             © 2026 / ALL RIGHTS RESERVED
                         </p>
                     </div>
 
                     {/* Role */}
                     <div className="lg:text-center">
-                        <p className="font-mono text-[10px] tracking-[0.2em] text-neutral-600">
+                        <p className="font-mono text-[11px] tracking-[0.2em] text-neutral-500">
                             MULTIMEDIA ENGINEER
                         </p>
 
-                        <p className="mt-1 font-mono text-[10px] tracking-[0.2em] text-neutral-600">
+                        <p className="mt-1 font-mono text-[11px] tracking-[0.2em] text-neutral-500">
                             / SOFTWARE DEVELOPER
                         </p>
                     </div>
@@ -58,17 +58,6 @@ export default function Footer() {
 
                     </div>
 
-                </div>
-
-                {/* Bottom line */}
-                <div className="mt-10 flex items-center justify-between border-t border-neutral-800 pt-5">
-                    <span className="font-mono text-[9px] tracking-[0.2em] text-neutral-700">
-                        DIGITAL EXPERIENCES / 001
-                    </span>
-
-                    <span className="font-mono text-[9px] tracking-[0.2em] text-[#E53935]">
-                        END
-                    </span>
                 </div>
 
             </div>

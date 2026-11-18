@@ -1,6 +1,7 @@
 import mushroomMania from "../assets/images/MushroomMania.jpg";
 import crowdFighter from "../assets/images/CrowdFighter.jpg";
 import zombieHospital from "../assets/images/ZombieHospital.jpg";
+import coralium from "../assets/images/Coralium.jpg";
 
 const projects = [
     {
@@ -35,6 +36,18 @@ const projects = [
         technologies: ["Unity", "C#", "WebGL"],
         image: zombieHospital,
         link: "https://charlesrincon.itch.io/zombie-hospital",
+    },
+    {
+        id: 4,
+        number: "04",
+        title: "Coralium",
+        category: "2.5D ADVENTURE",
+        year: "IN DEVELOPMENT",
+        description: "2.5D underwater adventure by Tamarillo Games, upcoming on Steam. Players guide a magical coral polyp that restores reefs and learns abilities from other fish. I contribute as a programmer within the development team, working across the game's systems.",
+        technologies: ["Unity", "C#"],
+        image: coralium,
+        link: "https://store.steampowered.com/app/2896770/Coralium/",
+        linkLabel: "VIEW ON STEAM",
     },
 ];
 

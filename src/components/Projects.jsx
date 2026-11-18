@@ -359,7 +359,7 @@ export default function Projects() {
                             >
                                 <span className="h-px w-8 bg-[#E53935] transition-all duration-300 group-hover:w-12" />
 
-                                PLAY ON ITCH.IO
+                                {project.linkLabel ?? "PLAY ON ITCH.IO"}
 
                                 <ArrowUpRight size={14} aria-hidden="true" />
 

@@ -2,6 +2,7 @@ import mushroomMania from "../assets/images/MushroomMania.jpg";
 import crowdFighter from "../assets/images/CrowdFighter.jpg";
 import zombieHospital from "../assets/images/ZombieHospital.jpg";
 import coralium from "../assets/images/Coralium.jpg";
+import bookingPlatform from "../assets/images/BookingPlatform.jpg";
 
 const projects = [
     {
@@ -48,6 +49,18 @@ const projects = [
         image: coralium,
         link: "https://store.steampowered.com/app/2896770/Coralium/",
         linkLabel: "VIEW ON STEAM",
+    },
+    {
+        id: 5,
+        number: "05",
+        title: "Booking Platform",
+        category: "WEB & MOBILE APP",
+        year: "2026",
+        description: "Multi-tenant appointment booking platform for barbershops, salons and clinics, built as a single Android, iOS and web app. Each business gets its own branding, services, schedules and rules without code changes, with data isolated per business through PostgreSQL row-level security.",
+        technologies: ["React Native", "Expo", "TypeScript", "Supabase"],
+        image: bookingPlatform,
+        link: "https://reservas-demo.expo.app",
+        linkLabel: "TRY THE LIVE DEMO",
     },
 ];
 

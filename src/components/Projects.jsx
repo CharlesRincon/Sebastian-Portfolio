@@ -188,7 +188,7 @@ export default function Projects() {
                                     {project.image ? (
                                         <img
                                             src={project.image}
-                                            alt={`${project.title} gameplay screenshot`}
+                                            alt={`${project.title} screenshot`}
                                             loading="lazy"
                                             decoding="async"
                                             className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.035]"

@@ -1,5 +1,5 @@
 import { Menu, X } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const links = [
     { name: "About", href: "#about" },
@@ -10,6 +10,23 @@ const links = [
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
+    const [activeHref, setActiveHref] = useState("");
+
+    // The section crossing the middle of the viewport is the active one.
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) setActiveHref(`#${entry.target.id}`);
+                });
+            },
+            { rootMargin: "-50% 0px -50% 0px" }
+        );
+
+        document.querySelectorAll("main section[id]").forEach((section) => observer.observe(section));
+
+        return () => observer.disconnect();
+    }, []);
 
     return (
         <header className="fixed left-0 right-0 top-0 z-50 border-b border-white/5 bg-[#090909]/80 backdrop-blur-md">
@@ -36,11 +53,12 @@ export default function Navbar() {
                         <a
                             key={link.name}
                             href={link.href}
-                            className="group relative py-2 text-sm font-medium text-neutral-400 transition-colors duration-300 hover:text-white"
+                            aria-current={activeHref === link.href ? "location" : undefined}
+                            className="group relative py-2 text-sm font-medium text-neutral-400 transition-colors duration-300 hover:text-white aria-[current=location]:text-white"
                         >
                             {link.name}
 
-                            <span className="absolute bottom-0 left-0 h-px w-0 bg-[#E53935] transition-all duration-300 group-hover:w-full" />
+                            <span className="absolute bottom-0 left-0 h-px w-0 bg-[#E53935] transition-all duration-300 group-hover:w-full group-aria-[current=location]:w-full" />
                         </a>
                     ))}
                 </div>
@@ -69,7 +87,8 @@ export default function Navbar() {
                                 key={link.name}
                                 href={link.href}
                                 onClick={() => setIsOpen(false)}
-                                className="group flex items-center gap-4 text-lg font-medium text-neutral-300 transition-colors duration-300 hover:text-white"
+                                aria-current={activeHref === link.href ? "location" : undefined}
+                                className="group flex items-center gap-4 text-lg font-medium text-neutral-300 transition-colors duration-300 hover:text-white aria-[current=location]:text-white"
                             >
                                 <span className="font-mono text-xs tracking-[0.15em] text-[#E53935]">
                                     0{index + 1}
@@ -79,7 +98,7 @@ export default function Navbar() {
                                     {link.name}
                                 </span>
 
-                                <span className="ml-auto h-px w-0 bg-[#E53935] transition-all duration-300 group-hover:w-8" />
+                                <span className="ml-auto h-px w-0 bg-[#E53935] transition-all duration-300 group-hover:w-8 group-aria-[current=location]:w-8" />
                             </a>
                         ))}
                     </div>

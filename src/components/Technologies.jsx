@@ -129,30 +129,6 @@ export default function Technologies() {
                     ))}
                 </motion.div>
 
-                {/* Bottom information */}
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={{ once: true }}
-                    transition={{
-                        duration: 0.8,
-                        delay: 0.4,
-                    }}
-                    className="mt-24 border-t border-neutral-800 pt-6"
-                >
-                    <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
-
-                        <span className="font-mono text-xs tracking-[0.2em] text-neutral-600">
-                            LANGUAGES / FRAMEWORKS / TOOLS / ENGINES
-                        </span>
-
-                        <span className="font-mono text-xs tracking-[0.2em] text-[#E53935]">
-                            04
-                        </span>
-
-                    </div>
-                </motion.div>
-
             </div>
         </section>
     );

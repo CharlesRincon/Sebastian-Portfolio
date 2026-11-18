@@ -243,23 +243,6 @@ export default function Services() {
 
                                     <div className="mt-12 flex items-center justify-between border-t border-neutral-800 pt-5">
 
-                                        {/* Availability */}
-                                        <div className="flex items-center gap-3">
-
-                                            <span className="relative flex h-2 w-2">
-
-                                                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#E53935] opacity-30" />
-
-                                                <span className="relative inline-flex h-2 w-2 rounded-full bg-[#E53935] shadow-[0_0_8px_#E53935]" />
-
-                                            </span>
-
-                                            <span className="font-mono text-[11px] tracking-[0.2em] text-neutral-500 transition-colors duration-300 group-hover:text-neutral-400">
-                                                AVAILABLE
-                                            </span>
-
-                                        </div>
-
                                         {/* Service tag */}
                                         <span className="font-mono text-[11px] tracking-[0.18em] text-neutral-500 transition-colors duration-300 group-hover:text-[#E53935]">
                                             {service.tag}
@@ -273,31 +256,6 @@ export default function Services() {
                     })}
 
                 </div>
-
-                {/* =======================================================
-            BOTTOM STATEMENT
-        ======================================================= */}
-
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={{ once: true }}
-                    transition={{
-                        duration: 0.8,
-                        delay: 0.2,
-                    }}
-                    className="mt-16 flex flex-col justify-between gap-4 border-t border-neutral-800 pt-6 sm:flex-row sm:items-center"
-                >
-
-                    <span className="font-mono text-xs tracking-[0.2em] text-neutral-600">
-                        ENGINEERING × DESIGN × INTERACTION
-                    </span>
-
-                    <span className="font-mono text-xs tracking-[0.2em] text-[#E53935]">
-                        04 SERVICES
-                    </span>
-
-                </motion.div>
 
             </div>
         </section>

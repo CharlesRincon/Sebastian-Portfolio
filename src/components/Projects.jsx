@@ -371,29 +371,6 @@ export default function Projects() {
 
                 </div>
 
-                {/* BOTTOM STATEMENT*/}
-
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={{ once: true }}
-                    transition={{
-                        duration: 0.8,
-                        delay: 0.2,
-                    }}
-                    className="mt-24 flex flex-col justify-between gap-4 border-t border-neutral-800 pt-6 sm:flex-row sm:items-center"
-                >
-
-                    <span className="font-mono text-xs tracking-[0.2em] text-neutral-500">
-                        SELECTED PROJECTS / 2026
-                    </span>
-
-                    <span className="font-mono text-xs tracking-[0.2em] text-[#E53935]">
-                        03 WORK
-                    </span>
-
-                </motion.div>
-
             </div>
         </section>
     );

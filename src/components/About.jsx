@@ -165,20 +165,6 @@ export default function About() {
               <div className="absolute inset-0 bg-black/10" />
 
               {/* =================================================
-                  TOP LEFT INDICATOR
-              ================================================= */}
-
-              <div className="absolute left-5 top-5 flex items-center gap-2">
-
-                <span className="h-1.5 w-1.5 rounded-full bg-[#E53935] shadow-[0_0_10px_#E53935]" />
-
-                <span className="font-mono text-[11px] tracking-[0.15em] text-neutral-500">
-                  PROFILE
-                </span>
-
-              </div>
-
-              {/* =================================================
                   TOP RIGHT CORNER
               ================================================= */}
 
@@ -189,22 +175,6 @@ export default function About() {
               ================================================= */}
 
               <div className="absolute bottom-1/2 left-0 h-16 w-px bg-gradient-to-b from-transparent via-[#E53935]/60 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-
-              {/* =================================================
-                  BOTTOM METADATA
-              ================================================= */}
-
-              <div className="absolute bottom-5 left-5 right-5 flex justify-between font-mono text-[11px] tracking-[0.15em] text-neutral-500">
-
-                <span>
-                  SEBASTIAN_R
-                </span>
-
-                <span>
-                  001
-                </span>
-
-              </div>
 
               {/* =================================================
                   BOTTOM RED LINE
@@ -395,35 +365,6 @@ export default function About() {
 
             </div>
           </div>
-        </motion.div>
-
-        {/* =======================================================
-            BOTTOM STATEMENT
-        ======================================================= */}
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{
-            duration: 1,
-            delay: 0.3,
-          }}
-          className="mt-24 border-t border-neutral-800 pt-6"
-        >
-
-          <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
-
-            <span className="font-mono text-xs tracking-[0.22em] text-neutral-500">
-              TECHNOLOGY × CREATIVITY × INTERACTION
-            </span>
-
-            <span className="font-mono text-xs tracking-[0.22em] text-[#E53935]">
-              01
-            </span>
-
-          </div>
-
         </motion.div>
 
       </div>

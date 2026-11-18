@@ -213,33 +213,6 @@ export default function Contact() {
 
                 </motion.div>
 
-                {/* =========================================================
-                    BOTTOM DETAIL
-                ========================================================= */}
-
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={{ once: true }}
-                    transition={{
-                        duration: 0.8,
-                        delay: 0.4,
-                    }}
-                    className="mt-32 border-t border-neutral-800 pt-6"
-                >
-                    <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
-
-                        <span className="font-mono text-xs tracking-[0.2em] text-neutral-600">
-                            OPEN FOR PROJECTS / COLLABORATIONS
-                        </span>
-
-                        <span className="font-mono text-xs tracking-[0.2em] text-[#E53935]">
-                            05 CONTACT
-                        </span>
-
-                    </div>
-                </motion.div>
-
             </div>
         </section>
     );
